@@ -13,37 +13,48 @@ from dataset_tools.templates import (
 ##################################
 # * Before uploading to instance #
 ##################################
-PROJECT_NAME: str = None
-PROJECT_NAME_FULL: str = None
+PROJECT_NAME: str = "Power Plant Satellite Imagery Dataset"
+PROJECT_NAME_FULL: str = "Power Plant Satellite Imagery Dataset (US Power Plants NAIP/LANDSAT8)"
 HIDE_DATASET = True  # set False when 100% sure about repo quality
 
 ##################################
 # * After uploading to instance ##
 ##################################
-LICENSE: License = None
-APPLICATIONS: List[Union[Industry, Domain, Research]] = None
-CATEGORY: Category = None
+LICENSE: License = License.CC_BY_4_0()
+APPLICATIONS: List[Union[Industry, Domain, Research]] = [Industry.Energy()]
+CATEGORY: Category = Category.Aerial(extra=Category.EnergyAndUtilities())
 
-CV_TASKS: List[CVTask] = None
-ANNOTATION_TYPES: List[AnnotationType] = None
+CV_TASKS: List[CVTask] = [
+    CVTask.InstanceSegmentation(),
+    CVTask.SemanticSegmentation(),
+    CVTask.ObjectDetection(),
+    CVTask.Classification(),
+]
+ANNOTATION_TYPES: List[AnnotationType] = [CVTask.InstanceSegmentation()]
 
-RELEASE_DATE: Optional[str] = None  # e.g. "YYYY-MM-DD"
+RELEASE_DATE: Optional[str] = "2017-08-16"  # e.g. "YYYY-MM-DD"
 if RELEASE_DATE is None:
     RELEASE_YEAR: int = None
 
-HOMEPAGE_URL: str = None
+HOMEPAGE_URL: str = (
+    "https://figshare.com/articles/dataset/Power_Plant_Satellite_Imagery_Dataset/5307364"
+)
 # e.g. "https://some.com/dataset/homepage"
 
-PREVIEW_IMAGE_ID: int = None
+PREVIEW_IMAGE_ID: int = 11651721
 # This should be filled AFTER uploading images to instance, just ID of any image.
 
-GITHUB_URL: str = None
+GITHUB_URL: str = "https://github.com/dataset-ninja/power-plant-satellite-imagery-dataset"
 # URL to GitHub repo on dataset ninja (e.g. "https://github.com/dataset-ninja/some-dataset")
 
 ##################################
 ### * Optional after uploading ###
 ##################################
-DOWNLOAD_ORIGINAL_URL: Optional[Union[str, dict]] = None
+DOWNLOAD_ORIGINAL_URL: Optional[Union[str, dict]] = {
+    "Download All": "https://figshare.com/ndownloader/articles/5307364/versions/1",
+    "eGRID2014_Data_v2_US_EPA_with_imagery_list_for_power_plants.xlsx": "https://figshare.com/ndownloader/files/9097597",
+    "Power Plant Satellite Imagery Dataset Overview.pdf": "https://figshare.com/ndownloader/files/9104302",
+}
 # Optional link for downloading original dataset (e.g. "https://some.com/dataset/download")
 
 CLASS2COLOR: Optional[Dict[str, List[str]]] = None
@@ -51,19 +62,49 @@ CLASS2COLOR: Optional[Dict[str, List[str]]] = None
 
 # If you have more than the one paper, put the most relatable link as the first element of the list
 # Use dict key to specify name for a button
-PAPER: Optional[Union[str, List[str], Dict[str, str]]] = None
+PAPER: Optional[Union[str, List[str], Dict[str, str]]] = {
+    "Dataset Overview": "https://figshare.com/articles/dataset/Power_Plant_Satellite_Imagery_Dataset/5307364?file=9104302"
+}
 BLOGPOST: Optional[Union[str, List[str], Dict[str, str]]] = None
-REPOSITORY: Optional[Union[str, List[str], Dict[str, str]]] = {"GitHub":"some_link_to_repo_if_exists"}
+REPOSITORY: Optional[Union[str, List[str], Dict[str, str]]] = None
 
-CITATION_URL: Optional[str] = None
-AUTHORS: Optional[List[str]] = None
-AUTHORS_CONTACTS: Optional[List[str]] = None
+CITATION_URL: Optional[
+    str
+] = "https://figshare.com/articles/dataset/Power_Plant_Satellite_Imagery_Dataset/5307364"
+AUTHORS: Optional[List[str]] = [
+    "Kyle Bradbury",
+    "Benjamin Brigman",
+    "Gouttham Chandrasekar",
+    "Leslie Collins",
+    "Shamikh Hossain",
+    "Marc Jeuland",
+    "Timothy Johnson",
+    "Boning Li",
+    "Trishul Nagenalli",
+]
+AUTHORS_CONTACTS: Optional[List[str]] = ["kyle.bradbury@duke.edu"]
 
-ORGANIZATION_NAME: Optional[Union[str, List[str]]] = None
-ORGANIZATION_URL: Optional[Union[str, List[str]]] = None
+ORGANIZATION_NAME: Optional[Union[str, List[str]]] = "Duke University, USA"
+ORGANIZATION_URL: Optional[Union[str, List[str]]] = "https://duke.edu/"
 
 # Set '__PRETEXT__' or '__POSTTEXT__' as a key with string value to add custom text. e.g. SLYTAGSPLIT = {'__POSTTEXT__':'some text}
-SLYTAGSPLIT: Optional[Dict[str, Union[List[str], str]]] = None
+SLYTAGSPLIT: Optional[Dict[str, Union[List[str], str]]] = {
+    "fuel types": [
+        "gas",
+        "solar",
+        "hydro",
+        "wind",
+        "biomass",
+        "coal",
+        "oil",
+        "geothermal",
+        "otfh",
+        "nuclear",
+        "unknown",
+        "ofsl",
+    ],
+    "__POSTTEXT__": "Additionally, every image has information about its ***source***, ***eGrid_id***, ***state***, and ***category***",
+}
 TAGS: Optional[List[str]] = None
 
 
