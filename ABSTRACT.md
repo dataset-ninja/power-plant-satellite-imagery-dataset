@@ -26,18 +26,18 @@ The dataset offers various possibilities for data usage. The authors have previo
 
 Fuel types:
 
-| Fuel Category |Description (the primary fuel is derived from)|Count |
-| --------- |-------|---------|
-|GAS|gas|1160|
-|SOLAR|solar power|850|
-|HYDRO|hydro power|688|
-|WIND|wind power|457|
-|BIOMASS|biomass sources|427|
-|COAL|coal|357|
-|OIL|oil|326|
-|GEOTHERMAL|geothermal power|59|
-|OTHF|waste heat/unknown/purchased |53|
-|NUCLEAR|nuclear|46|
-|UNKNOWN|not on the document|19|
-|OFSL|another fossil fuel|12|
-|__Total__|__-__|__4454__|
+| Fuel Category |Description (the primary fuel is derived from)|
+| --------- |-------|
+|GAS|gas|
+|SOLAR|solar power|
+|HYDRO|hydro power|
+|WIND|wind power|
+|BIOMASS|biomass sources|
+|COAL|coal|
+|OIL|oil|
+|GEOTHERMAL|geothermal power|
+|OTHF|waste heat/unknown/purchased |
+|NUCLEAR|nuclear|
+|UNKNOWN|not on the document|
+|OFSL|another fossil fuel|
+|__Total__|__-__|
