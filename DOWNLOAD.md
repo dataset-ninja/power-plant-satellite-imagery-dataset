@@ -1,6 +1,6 @@
 Dataset **Power Plant Satellite Imagery Dataset** can be downloaded in [Supervisely format](https://developer.supervisely.com/api-references/supervisely-annotation-json-format):
 
- [Download](https://www.dropbox.com/scl/fi/vmgrhs065lczf17hm6fn2/power-plant-satellite-imagery-dataset-DatasetNinja.tar?rlkey=ka5vygxcx5l2pxe5rwyj681dh&dl=1)
+ [Download](https://assets.supervisely.com/remote/eyJsaW5rIjogImZzOi8vYXNzZXRzLzMyMDJfUG93ZXIgUGxhbnQgU2F0ZWxsaXRlIEltYWdlcnkgRGF0YXNldC9wb3dlci1wbGFudC1zYXRlbGxpdGUtaW1hZ2VyeS1kYXRhc2V0LURhdGFzZXROaW5qYS50YXIiLCAic2lnIjogIjFraTJGVVR6NFJ1ZHpqeVZ0T016d2ExMURZQUpIZ1hKdG1pc3JTQkFKWHc9In0=)
 
 As an alternative, it can be downloaded with *dataset-tools* package:
 ``` bash
